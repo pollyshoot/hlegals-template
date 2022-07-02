@@ -1,0 +1,105 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.page-header {
+  background: linear-gradient($bg-gradient1);
+
+  &::before {
+    @include sm-min {
+      content: "";
+      @include abs-position();
+      background-image: url(../img/bg.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 100%;
+      background-size: 85vh;
+    }
+ 
+  }
+
+  &::after {
+    content: "";
+    @include abs-position(70%);
+    background: linear-gradient(
+      to top,
+      $color-primary 0%,
+      transparent 100%
+    );
+    z-index: 1;
+  }
+
+  &__grid {
+    top: 0;
+    left: 0;
+    right: 0;
+    gap: $gap;
+    position: absolute;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    
+    @extend %container;
+    
+
+    @include sm-min {
+      grid-template-areas: "logo actions" "logo menu";
+      padding-top: 50px;
+    }
+
+    @include sm {
+      grid-template-areas: "actions actions" "logo menu";
+      padding-top: $gap;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__actions {
+    grid-area: actions;
+  }
+
+  &__content {
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+   
+
+    &__image {
+      margin-top: 200px;
+     
+    }
+
+    &-title {
+      padding: $gap;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+      position: absolute;
+      max-width: 660px;
+      font-weight: 500;
+      font-size: 38px;
+      text-align: center;
+
+      color: $color-white;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: $gap;
+    z-index: 2;
+    cursor: pointer;
+  }
+}

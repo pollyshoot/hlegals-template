@@ -1,0 +1,88 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.services {
+  position: relative;
+  background: linear-gradient($bg-gradient4);
+border-radius: 0 0 12px 12px;
+padding-top: 80px;
+padding-bottom: 80px;
+
+@include sm {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+border-radius: 0px 0px 12px 12px;
+padding-top: 40px;
+}
+
+&::before {
+  content: "";
+  border-radius: 0 0 12px 12px;
+  background-color: $color-grey-text;
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  right: 20px;
+  height: 10px;
+  z-index: 1;
+}
+
+&::after {
+  content: "";
+  border-radius: 0 0 12px 12px;
+  background-color: $color-grey-separator;
+  position: absolute;
+  top: 100%;
+  left: 40px;
+  right: 40px;
+  height: 20px;
+}
+
+&__container {
+  @extend %container;
+
+}
+
+&__page-link {
+font-size: 14px;
+letter-spacing: 1px;
+text-transform: uppercase;
+color: $color-white;
+
+opacity: 0.5;
+
+&__img {
+  position: relative;
+  top: 0.9px;
+  left: 5px;
+}
+}
+
+&__title {
+  font-size: 42px;
+background: linear-gradient(90.13deg, #F0145A 1%, #EF8080 80%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+margin-bottom: 60px;
+}
+
+&__grid {
+  display: grid;
+  gap: 40px;
+
+
+  @include md-min {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+}

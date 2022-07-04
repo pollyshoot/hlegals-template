@@ -1,0 +1,143 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+$size: 16px;
+.team {
+  margin-top: 60px;
+
+  &__item {
+    display: flex;
+    gap: 40px;
+    background: $color-grey-bg;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    
+
+    &-image {
+      height: auto;
+    }
+  
+
+    @include md {
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    &-picture {
+      @include md {
+        display: none;
+      }
+    }
+  }
+   
+
+  &__container {
+    @extend %container;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    @include md-min {
+      padding-top: 40px;
+      &-imgsm {
+        display: none;
+      }
+    }
+    @include md-min {
+      &-name2 {
+        display: none;
+      }
+      @include md {
+        margin-top: 0;
+      }
+
+    
+      }
+      &-name {
+        @include md {
+          display: none;
+        }
+
+    }
+
+    &-description {
+      padding-bottom: 20px;
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+
+      @include md {
+        font-size: 32px;
+        line-height: 38px;
+        padding-bottom: 10px;
+      }
+    }
+
+    &-name,
+    &-name2 {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+      color: $color-grey-text;
+      padding-bottom: 5px;
+    }
+
+    &-position {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 22px;
+      color: $color-grey-text;
+    }
+
+    &-worker {
+      @include md {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+      
+    }
+  }
+
+  &__content-link {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-active;
+
+    &__img {
+      position: relative;
+      top: 0.9px;
+      left: 5px;
+    }
+  }
+
+  .slider {
+    &__indicators--team {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+    }
+
+    &__indicator--team {
+      width: $size;
+      height: $size;
+      opacity: 0.2;
+      border-radius: $size * 0.5;
+      background-color: $color-active;
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -2,52 +2,54 @@
 @use "../../../mixins" as *;
 
 .page-header {
+  position: relative;
+
   background: linear-gradient($bg-gradient1);
 
   &::before {
     @include sm-min {
       content: "";
-      @include abs-position();
+
       background-image: url(../img/bg.svg);
       background-repeat: no-repeat;
       background-position: 50% 100%;
       background-size: 85vh;
+
+      @include abs-position;
     }
- 
   }
 
   &::after {
-    content: "";
-    @include abs-position(70%);
-    background: linear-gradient(
-      to top,
-      $color-primary 0%,
-      transparent 100%
-    );
     z-index: 1;
+
+    content: "";
+
+    background: linear-gradient(to top, $color-primary 0%, transparent 100%);
+
+    @include abs-position(70%);
   }
 
   &__grid {
-    top: 0;
-    left: 0;
-    right: 0;
-    gap: $gap;
     position: absolute;
     z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+
     display: grid;
-    grid-template-columns: auto 1fr;
-    
+
     @extend %container;
-    
-
+    gap: $gap;
+    grid-template-columns: auto 1fr;
     @include sm-min {
-      grid-template-areas: "logo actions" "logo menu";
       padding-top: 50px;
-    }
 
+      grid-template-areas: "logo actions" "logo menu";
+    }
     @include sm {
-      grid-template-areas: "actions actions" "logo menu";
       padding-top: $gap;
+
+      grid-template-areas: "actions actions" "logo menu";
     }
   }
 
@@ -65,41 +67,47 @@
 
   &__content {
     position: relative;
-    min-height: 100vh;
+    z-index: 1;
 
     display: flex;
+    overflow: hidden;
+    align-items: center;
     justify-content: center;
-    align-items: flex-end;
 
-   
+    min-height: 100vh;
 
-    &__image {
-      margin-top: 200px;
-     
+    &-image {
+      transform: translateY(30%);
     }
 
     &-title {
-      padding: $gap;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
       position: absolute;
-      max-width: 660px;
-      font-weight: 500;
-      font-size: 38px;
+      top: 50%;
+      left: 50%;
+
+      width: 100%;
+      max-width: 620px;
+      margin: 0;
+      padding: $gap;
+
+      transform: translate(-50%, -50%);
       text-align: center;
 
       color: $color-white;
+
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 45px;
     }
   }
 
   &__button {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: $gap;
     z-index: 2;
+    bottom: $gap;
+    left: 50%;
+
     cursor: pointer;
+    transform: translateX(-50%);
   }
 }

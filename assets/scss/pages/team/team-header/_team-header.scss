@@ -1,0 +1,128 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.team-header {
+  position: relative;
+
+  &__grid {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: grid;
+
+    @extend %container;
+
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+    @include md-min {
+      padding-top: 50px;
+
+      grid-template-areas: "teamlogo teamactions" "teamlogo teammenu";
+    }
+    @include md {
+      padding-top: $gap;
+
+      grid-template-areas: "teamactions teamactions" "teamlogo teammenu";
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    grid-area: teamlogo;
+
+    @include md {
+      height: 22px;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    &-image,
+    &-slash,
+    &-slashp {
+
+      object-fit: contain;
+    }
+   &-image {
+    @include md {
+      
+    height: 31px;
+    width: auto;
+    }
+   }
+
+   &-slash,
+   &-slashp {
+    @include md {
+      height: 24px;
+    }
+   }
+  }
+
+  &__menu {
+    grid-area: teammenu;
+  }
+
+  &__actions {
+    grid-area: teamactions;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 38px;
+    line-height: 45px;
+
+    color: #323264;
+
+    @include md {
+      font-size: 19px;
+      line-height: 22px;
+    }
+  }
+}
+.menu__link {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+
+  color: #24a3ff;
+}
+.menu__link-active {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+text-align: right;
+  color: #f0145a;
+  @include sm-min {
+    border-bottom: 2px solid #f0145a;
+  }
+}
+.actions__language-link {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: $color-grey-text;
+}
+
+.actions__location-url {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: right;
+  color: #b3b3ba;
+}
+
+.actions__phone-url {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: right;
+
+  color: #b3b3ba;
+}

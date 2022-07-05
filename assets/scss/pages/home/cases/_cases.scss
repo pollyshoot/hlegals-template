@@ -3,71 +3,69 @@
 
 .cases {
   margin-top: 40px;
-
-  &__lines {
-    background: #f5f5fa;
-
+  background: #f5f5fa;
     border-radius: 12px;
     padding: 20px;
-  }
-
+ 
   &__container {
     @extend %container;
-   
   }
+//  &__separator {
+  
 
-  &__line1 {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 30.8% 34.4% 1fr;
-  }
-
-  &__line2 {
-    display: grid;
-    gap: 40px;
-    grid-template-columns: 24.25% 34.32% 1fr;
-  }
-
-
+//     width: 100%;
+//     height: 4px;
+//     background-color: #fff;
+//  }
 }
 
+
 .case {
-  text-align: left;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-gap: 20px;
-
+display: flex;
+flex-wrap: wrap;
 
   &__main {
     display: flex;
     flex-direction: column;
-    height: 250px;
     justify-content: flex-end;
-    gap: 40px;
-     
-    
+    gap: 20px;
+
+    @include md {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
   }
+
   &__main-title {
     font-size: 14px;
     line-height: 17px;
     font-weight: 700;
-      letter-spacing: 1px;
+    letter-spacing: 1px;
     text-transform: uppercase;
     color: $color-accent;
     text-align: left;
-    
   }
+}
+.case {
+ 
 
   &__description {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
-    display: flex;
+
     align-items: flex-end;
     color: $color-soft;
-    top: 100%;
+ 
+    padding-bottom: 20px;
+
+    @include lg {
+      font-size: 20px;
+    }
+    @include sm {
+      font-size: 18px;
+      line-height: 21px;
+    }
   }
 
   &__company {
@@ -75,4 +73,31 @@ gap: 20px;
     line-height: 26px;
     color: $color-grey-text;
   }
+}
+
+.case__two {
+  display: flex;
+  flex-basis: 430px;
+  flex-direction: column;
+}
+
+.case__three {
+  display: flex;
+  flex-basis: 430px;
+  flex-direction: column;
+}
+.case__four {
+  display: flex;
+  flex-basis: 430px;
+  flex-direction: column;
+}
+.case__five {
+  display: flex;
+  flex-basis: 430px;
+  flex-direction: column;
+}
+.case__six {
+  display: flex;
+  flex-basis: 430px;
+  flex-direction: column;
 }

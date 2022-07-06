@@ -2,65 +2,138 @@
 @use "../../../mixins" as *;
 
 .cases {
-  margin-top: 40px;
-  background: #f5f5fa;
-    border-radius: 12px;
-    padding: 20px;
- 
   &__container {
     @extend %container;
-  }
-//  &__separator {
-  
 
-//     width: 100%;
-//     height: 4px;
-//     background-color: #fff;
-//  }
-}
+    background-color: #fff;
 
-
-.case {
-display: flex;
-flex-wrap: wrap;
-
-  &__main {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    gap: 20px;
+    @include md-min {
+      margin-top: 40px;
+    }
 
     @include md {
-      grid-column-start: 1;
-      grid-column-end: 3;
+      margin-top: 20px;
     }
   }
 
-  &__main-title {
+  &__content {
+    display: grid;
+
+    padding: 20px;
+    border-radius: 12px;
+    gap: 2px;
+
+    @include md-min {
+      grid-template-columns: 1.5fr 0.3fr 1.6fr 0.5fr 2fr;
+      grid-template-rows: 0.3fr 1fr 1fr;
+      grid-template-areas:
+        "item1 item1 item3 item3 item4"
+        "item2 item2 item3 item3 item4"
+        "item5 item6 item6 item7 item7";
+    }
+
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0.5fr 1fr 1fr 1fr;
+      grid-template-areas:
+        "item1 item1"
+        "item2 item3"
+        "item4 item5"
+        "item6 item7";
+      padding: 10px;
+    }
+
+    @include sm {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7";
+    }
+  }
+
+  &__item {
+    padding: 20px;
+    background-color: #f5f5fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    row-gap: 20px;
+    cursor: pointer;
+  }
+
+  &__item1 {
+    border-radius: 12px 0 0 0;
+    grid-area: item1;
+
+    @include md {
+      border-radius: 12px 12px 0 0;
+      justify-content: center;
+    }
+  }
+
+  &__item2 {
+    grid-area: item2;
+  }
+
+  &__item3 {
+    grid-area: item3;
+  }
+
+  &__item4 {
+    grid-area: item4;
+
+    @include md-min {
+      border-radius: 0 12px 0 0;
+    }
+  }
+
+  &__item5 {
+    grid-area: item5;
+    @include md-min {
+      border-radius: 0 0 0 12px;
+    }
+  }
+
+  &__item6 {
+    grid-area: item6;
+    @include md-sm {
+      border-radius: 0 0 0 12px;
+    }
+  }
+
+  &__item7 {
+    grid-area: item7;
+    border-radius: 0 0 12px 0;
+
+    @include sm {
+      border-radius: 0 0 12px 12px;
+    }
+  }
+  &__item-header {
     font-size: 14px;
     line-height: 17px;
-    font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: $color-accent;
-    text-align: left;
+    color: #f0145a;
   }
-}
-.case {
- 
 
-  &__description {
+  &__item-description {
     font-size: 24px;
     line-height: 28px;
     font-weight: 500;
-
     align-items: flex-end;
     color: $color-soft;
- 
     padding-bottom: 20px;
 
     @include lg {
       font-size: 20px;
+      padding-bottom: 0;
     }
     @include sm {
       font-size: 18px;
@@ -68,36 +141,9 @@ flex-wrap: wrap;
     }
   }
 
-  &__company {
+  &__item-company {
     font-size: 18px;
     line-height: 26px;
     color: $color-grey-text;
   }
-}
-
-.case__two {
-  display: flex;
-  flex-basis: 430px;
-  flex-direction: column;
-}
-
-.case__three {
-  display: flex;
-  flex-basis: 430px;
-  flex-direction: column;
-}
-.case__four {
-  display: flex;
-  flex-basis: 430px;
-  flex-direction: column;
-}
-.case__five {
-  display: flex;
-  flex-basis: 430px;
-  flex-direction: column;
-}
-.case__six {
-  display: flex;
-  flex-basis: 430px;
-  flex-direction: column;
 }

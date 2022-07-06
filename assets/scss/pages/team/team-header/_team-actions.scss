@@ -7,7 +7,6 @@
 
   align-items: center;
 
-
 @include sm-min {
   justify-content: flex-end;
 }
@@ -15,9 +14,7 @@
   @include sm {
     justify-content: space-between;
     
-  a {
-    color: $color-grey-text;
-  }
+ 
   }
 
   &__languages {
@@ -33,7 +30,7 @@
     padding: 6px 6px 5px 7px;
     &.active {
       background-color: $color-accent;
-      color: red;
+      color: #ffffff;
     }
 
     border-radius: 8px;
@@ -55,3 +52,34 @@
     }
   }
 }
+
+.team-actions__locations-url {
+
+  font-size: 16px;
+  line-height: 19px;
+
+  text-align: right;
+
+  color: #B3B3BA;
+}
+
+.team-actions__phone-url {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+ 
+  text-align: right;
+  
+  color: #B3B3BA;
+}
+
+.team-actions__language-link {
+  font-weight: 700;
+font-size: 12px;
+line-height: 14px;
+text-align: center;
+letter-spacing: 1px;
+
+color: #B3B3BA;
+}
+

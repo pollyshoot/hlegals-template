@@ -35,7 +35,8 @@ padding-bottom: 60px;
     gap: 40px;
     flex-wrap: wrap;
 
-    @include md {
+
+    @include lg {
       align-items: center;
       justify-content: center;
     }

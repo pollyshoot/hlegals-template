@@ -1,0 +1,35 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+.publications {
+  background-color: #f5f5fa;
+ 
+  &__container {
+    @extend %container;
+    padding-top: 40px;
+  }
+
+  &__header {
+    padding-bottom: 40px;
+
+    &-link {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #24a3ff;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 42px;
+      line-height: 50px;
+      background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      // width: min-content;
+    }
+  }
+}

@@ -337,7 +337,7 @@ template {
 /* md */
 /* sm */
 /* xs */
-.members, .team-header__grid, .page-footer__container, .publications__container, .cases__container, .team__container, .services__container, .experience__container, .page-header__grid {
+.members, .team-header__grid, .page-footer__container, .publications__container, .cases, .team__container, .services__container, .experience__container, .page-header__grid {
   max-width: 1360px;
   margin-left: auto;
   margin-right: auto;
@@ -813,12 +813,11 @@ a {
   opacity: 1;
 }
 
-.cases__container {
+.cases {
   background-color: #fff;
 }
 .cases__content {
   display: grid;
-  padding: 20px;
   border-radius: 12px;
   gap: 2px;
 }
@@ -1403,7 +1402,7 @@ a {
   .team__content-name2 {
     display: none;
   }
-  .cases__container {
+  .cases {
     margin-top: 40px;
   }
   .cases__content {
@@ -1531,14 +1530,13 @@ a {
         -ms-flex-align: center;
             align-items: center;
   }
-  .cases__container {
-    margin-top: 20px;
+  .cases {
+    margin-top: 30px;
   }
   .cases__content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 1fr;
     grid-template-areas: "item1 item1" "item2 item3" "item4 item5" "item6 item7";
-    padding: 10px;
   }
   .cases__item1 {
     border-radius: 12px 12px 0 0;

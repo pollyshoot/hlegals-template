@@ -2,9 +2,27 @@
 @use "../../../mixins" as *;
 
 .publication {
-  
+
   &__item {
     background-color: #fff;
+    
+    border-radius: 8px;
+ 
+   
+
+    &-content {
+      padding: 20px;
+    }
+
+    &-picture {
+    
+    }
+    &-image {
+      border-radius: 8px 8px 0 0;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     &-title {
       font-size: 18px;
@@ -19,12 +37,20 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       color: #b3b3ba;
+      @include sm-min {
+        border-bottom: 4px solid #E6E6F0;
+      }
+     
     }
 
     &-description {
       font-size: 16px;
       line-height: 22px;
       color: #000000;
+
+      @include xs {
+        display: none;
+      }
     }
   }
 }

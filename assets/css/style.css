@@ -904,6 +904,7 @@ a {
 
 .publications {
   background-color: #f5f5fa;
+  padding: 20px;
 }
 .publications__container {
   padding-top: 40px;
@@ -919,6 +920,11 @@ a {
   text-transform: uppercase;
   color: #24a3ff;
 }
+.publications__header-img {
+  position: relative;
+  top: 0.9px;
+  left: 5px;
+}
 .publications__header-title {
   font-weight: 700;
   font-size: 42px;
@@ -930,9 +936,25 @@ a {
   background-clip: text;
   text-fill-color: transparent;
 }
+.publications__items {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
 .publication__item {
   background-color: #fff;
+  border-radius: 8px;
+}
+.publication__item-content {
+  padding: 20px;
+}
+.publication__item-image {
+  border-radius: 8px 8px 0 0;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
 }
 .publication__item-title {
   font-size: 18px;
@@ -1313,6 +1335,9 @@ a {
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
+  .publication__item-date {
+    border-bottom: 4px solid #E6E6F0;
+  }
   .page-footer__content {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -1396,10 +1421,10 @@ a {
   .team__content {
     padding-top: 40px;
   }
-  .team__content-imgsm {
+  .team__content-name2 {
     display: none;
   }
-  .team__content-name2 {
+  .team__content-imgsm {
     display: none;
   }
   .cases {
@@ -1428,11 +1453,6 @@ a {
   .team-header__grid {
     padding-top: 50px;
     grid-template-areas: "teamlogo teamactions" "teamlogo teammenu";
-  }
-}
-@media (min-width: 992px) and (max-width: 991.8px) {
-  .team__content {
-    margin-top: 0;
   }
 }
 @media (max-width: 1279.8px) {
@@ -1512,6 +1532,9 @@ a {
   }
   .team__item-picture {
     display: none;
+  }
+  .team__content {
+    margin-top: 0;
   }
   .team__content-name {
     display: none;
@@ -1716,6 +1739,9 @@ a {
 @media (max-width: 575.8px) {
   .clients__grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .publication__item-description {
+    display: none;
   }
   .members {
     padding-top: 120px;

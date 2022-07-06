@@ -11,12 +11,10 @@ $size: 16px;
     background: $color-grey-bg;
     border-radius: 12px;
     margin-bottom: 20px;
-    
 
     &-image {
       height: auto;
     }
-  
 
     @include md {
       flex-direction: column;
@@ -29,7 +27,6 @@ $size: 16px;
       }
     }
   }
-   
 
   &__container {
     @extend %container;
@@ -38,28 +35,25 @@ $size: 16px;
   &__content {
     display: flex;
     flex-direction: column;
-
-    @include md-min {
-      padding-top: 40px;
-      &-imgsm {
-        display: none;
-      }
-    }
+   
     @include md-min {
       &-name2 {
         display: none;
       }
+
+      padding-top: 40px;
+      &-imgsm {
+        display: none;
+      }
+
+    }
+    @include md {
+      margin-top: 0;
+    }
+    &-name {
       @include md {
-        margin-top: 0;
+        display: none;
       }
-
-    
-      }
-      &-name {
-        @include md {
-          display: none;
-        }
-
     }
 
     &-description {
@@ -102,7 +96,6 @@ $size: 16px;
         gap: 10px;
         align-items: center;
       }
-      
     }
   }
 

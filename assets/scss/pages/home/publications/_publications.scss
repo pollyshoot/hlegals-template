@@ -3,7 +3,9 @@
 
 .publications {
   background-color: #f5f5fa;
- 
+  padding: 20px;
+
+
   &__container {
     @extend %container;
     padding-top: 40px;
@@ -20,6 +22,12 @@
       text-transform: uppercase;
       color: #24a3ff;
     }
+
+    &-img {
+      position: relative;
+      top: 0.9px;
+      left: 5px;
+    }
     &-title {
       font-weight: 700;
       font-size: 42px;
@@ -31,5 +39,11 @@
       text-fill-color: transparent;
       // width: min-content;
     }
+  }
+
+  &__items {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }

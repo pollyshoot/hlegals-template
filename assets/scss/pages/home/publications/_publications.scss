@@ -6,7 +6,7 @@
 
   background-color: #f5f5fa;
 
-  padding-bottom: 40px;
+  padding-bottom: 110px;
   overflow: hidden;
 
   @include xs-min {
@@ -103,7 +103,7 @@
     }
 
     @include xs {
-      position: relative;
+     padding-top: 20px;
       margin: 0 auto;
     }
   }

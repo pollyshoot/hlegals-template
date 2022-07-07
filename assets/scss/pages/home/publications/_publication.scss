@@ -2,21 +2,26 @@
 @use "../../../mixins" as *;
 
 .publication {
-
   &__item {
     background-color: #fff;
-    
+    display: inline-block;
     border-radius: 8px;
- 
-   
-
-    &-content {
-      padding: 20px;
-    }
-
-    &-picture {
     
+    max-width: 415px;
+
+    @include md-min {
+      margin-bottom: 40px;
     }
+
+    @include sm-min {
+      margin-bottom: 20px;
+    }
+
+    @include sm {
+      margin-bottom: 20px;
+    }
+
+
     &-image {
       border-radius: 8px 8px 0 0;
       width: 100%;
@@ -28,6 +33,17 @@
       font-size: 18px;
       line-height: 21px;
       color: #24a3ff;
+      padding-top: 20px;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      @include xs {
+        font-weight: 500;
+      }
+    }
+
+    &-title > a {
+      color: #24a3ff;
     }
 
     &-date {
@@ -37,16 +53,25 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       color: #b3b3ba;
+
+      margin-top: 10px;
+      margin-right: 20px;
+      margin-left: 20px;
+      padding-bottom: 20px;
+
       @include sm-min {
-        border-bottom: 4px solid #E6E6F0;
+        border-bottom: 4px solid #e6e6f0;
       }
-     
     }
 
     &-description {
       font-size: 16px;
       line-height: 22px;
       color: #000000;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-right: 20px;
+      padding-left: 20px;
 
       @include xs {
         display: none;

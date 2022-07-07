@@ -32,22 +32,25 @@
           <li class="menu__item"><a class="menu__link" href="">контакти</a></li>
         </ul>
       </nav>
-      <div class="page-header__actions actions">
-        <nav class="actions__languages">
+      <nav class="page-header__actions actions">
+        <div class="actions__languages">
           <a class="actions__language-link active" href="">УК</a>
           <a class="actions__language-link" href="">РУ</a>
           <a class="actions__language-link" href="">EN</a>
-        </nav>
+        </div>
+        <div class="dot"></div>
         <div class="actions__locations">
           <a class="actions__location-url" href="">Одеса, Адміральський пр., 3</a>
         </div>
+        <div class="dot"></div>
         <div class="actions__phones">
           <a class="actions__phone-url" href="tel:+380503901591"> +38 (050) 390 15 91</a>
         </div>
+        <div class="dot"></div>
         <div class="actions__socials">
           <a class="actions__social-url" href=""><img class="actions__social-image" src="assets/img/fb.svg" alt=""></a>
         </div>
-      </div>
+      </nav>
     </div>
     <div class="page-header__content">
       <img class="page-header__content-image" src="assets/img/p.svg" alt="">
@@ -280,13 +283,15 @@
       <div class="publications__container">
         <div class="publications__content">
           <div class="publications__header">
-            <strong><a class="publications__header-link" href="">Публікації <img class="publications__header-img" src="assets/img/gap.svg" alt=""></a></strong>
+            <strong><a class="publications__header-link" href="">Публікації <img class="publications__header-img"
+                  src="assets/img/gap.svg" alt=""></a></strong>
             <div class="publications__header-title">Нам є що розповісти</div>
           </div>
           <div class="publications__items">
             <article class="publication__item">
               <div class="publication__item-content">
-                <h4 class="publication__item-title">Валютний контроль помер, хай живе валютний контроль!</h4>
+                <h4 class="publication__item-title"><a href="">Валютний контроль помер, хай живе валютний контроль!</a>
+                </h4>
                 <div class="publication__item-date">14 червня</div>
 
                 <p class="publication__item-description">Експерти проводять конференції, круглі столи та іншого штибу
@@ -296,35 +301,10 @@
             </article>
 
             <article class="publication__item">
-              <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public2.svg"
-                  alt=""></div>
-              <div class="publication__item-content">
-                <h4 class="publication__item-title">Equity associate</h4>
-                <div class="publication__item-date">22 квітня</div>
-                <p class="publication__item-description">На проектах я джун. При цьому я співвласник юридичної фірми. Як
-                  це відбулося. Перед вступом батьки мені казали, що якщо буду…</p>
-              </div>
-            </article>
-
-            <article class="publication__item">
-              <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public3.svg"
-                  alt=""></div>
-              <div class="publication__item-content">
-                <h4 class="publication__item-title">Штраф для «Корпорації добра»: що буде з Google та іншими за
-                  порушення
-                  GDPR</h4>
-                <div class="publication__item-date">29 вересня</div>
-                <p class="publication__item-description">І чому стягнення у 50 млн євро може стати доленосним
-                  прецедентом
-                  За матеріалами Mind.ua 21 січня Національна комісія із захисту даних.</p>
-              </div>
-            </article>
-
-            <article class="publication__item">
               <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public4.svg"
                   alt=""></div>
               <div class="publication__item-content">
-                <h4 class="publication__item-title">Заповіт міленіала</h4>
+                <h4 class="publication__item-title"><a href="">Заповіт міленіала</a></h4>
                 <div class="publication__item-date">19 серпня</div>
                 <p class="publication__item-description">Що і як передаватимуть у спадщину сучасні влогери, опініон
                   лідери
@@ -333,27 +313,60 @@
             </article>
 
             <article class="publication__item">
+              <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public2.svg"
+                  alt=""></div>
+              <div class="publication__item-content">
+                <h4 class="publication__item-title">
+                  <a href="">Equity associate</a>
+                </h4>
+                <div class="publication__item-date">22 квітня</div>
+                <p class="publication__item-description">На проектах я джун. При цьому я співвласник юридичної фірми. Як
+                  це відбулося. Перед вступом батьки мені казали, що якщо буду…</p>
+              </div>
+            </article>
+
+
+            <article class="publication__item xs-invisible">
               <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public5.svg"
                   alt=""></div>
               <div class="publication__item-content">
-                <h4 class="publication__item-title">Закон про мови: як зробити свій сайт відповідним</h4>
+                <h4 class="publication__item-title"><a href="">Закон про мови: як зробити свій сайт відповідним</a></h4>
                 <div class="publication__item-date">19 серпня</div>
                 <p class="publication__item-description">Наталія Кирик, керівник контент студії Wordfactory.ua По-перше,
                   це красиво! Це аргумент номер один на користь україномовного сайту. По-друге, це ефективно. У…</p>
               </div>
             </article>
 
-            <article class="publication__item">
+            <article class="publication__item xs-invisible">
+              <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public3.svg"
+                  alt=""></div>
+              <div class="publication__item-content">
+                <h4 class="publication__item-title"><a href="">Штраф для «Корпорації добра»: що буде з Google та іншими
+                    за порушення GDPR</a></h4>
+                <div class="publication__item-date">29 вересня</div>
+                <p class="publication__item-description">І чому стягнення у 50 млн євро може стати доленосним
+                  прецедентом
+                  За матеріалами Mind.ua 21 січня Національна комісія із захисту даних.</p>
+              </div>
+            </article>
+
+
+            <article class="publication__item xs-invisible">
               <div class="publication__item-picture"><img class="publication__item-image" src="assets/img/public6.svg"
                   alt=""></div>
               <div class="publication__item-content">
-                <h4 class="publication__item-title">Компенсація витрат на навчання дитини в дитячому садку та школі</h4>
+                <h4 class="publication__item-title"><a href="">Компенсація витрат на навчання дитини в дитячому садку та
+                    школі</a></h4>
                 <div class="publication__item-date">5 Лютого 2018</div>
                 <p class="publication__item-description">Про що йде мова В червні цього року Верховна Рада внесла зміни
                   до Податкового кодексу України. Відтепер батьки, які отримують офіційну…</p>
               </div>
             </article>
 
+          
+          </div>
+          <div class="publications__actions">
+            <button class="publications__button" type="button">Ще публікації</button>
           </div>
         </div>
       </div>

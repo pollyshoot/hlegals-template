@@ -1,2 +1,12 @@
 @use "../presets" as *;
 @use "../mixins" as *;
+
+
+.dot {
+  @include md-min {
+    width: 6px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: #b3b3ba;
+  }
+}

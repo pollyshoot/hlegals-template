@@ -6,7 +6,7 @@
 
   background-color: #f5f5fa;
 
-  padding-bottom: 110px;
+  padding-bottom: 40px;
   overflow: hidden;
 
   @include xs-min {
@@ -94,6 +94,7 @@
     position: absolute;
 
     @include xs-min {
+    
       left: 0;
       right: 0;
       bottom: 40px;
@@ -103,13 +104,15 @@
     }
 
     @include xs {
+      position: relative;
      padding-top: 20px;
       margin: 0 auto;
     }
   }
 
   &__button {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     min-width: 250px;
     min-height: 50px;
     padding: 3px;

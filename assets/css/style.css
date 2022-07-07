@@ -905,7 +905,7 @@ a {
 .publications {
   position: relative;
   background-color: #f5f5fa;
-  padding-bottom: 110px;
+  padding-bottom: 40px;
   overflow: hidden;
 }
 .publications__header-link {
@@ -944,7 +944,8 @@ a {
   position: absolute;
 }
 .publications__button {
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
   min-width: 250px;
   min-height: 50px;
   padding: 3px;
@@ -1831,6 +1832,7 @@ a {
             column-count: 1;
   }
   .publications__actions {
+    position: relative;
     padding-top: 20px;
     margin: 0 auto;
   }

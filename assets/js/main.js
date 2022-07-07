@@ -1,3 +1,5 @@
+
+// управление меню
 const menuBtn = document.querySelector('.menu__btn')
 const menuList = document.querySelector('.menu__list')
 const body = document.querySelector('body')

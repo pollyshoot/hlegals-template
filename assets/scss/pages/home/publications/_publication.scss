@@ -4,10 +4,9 @@
 .publication {
   &__item {
     background-color: #fff;
-    display: inline-block;
+    // display: inline-block;
     border-radius: 8px;
-    
-    max-width: 415px;
+    // max-width: 415px;
 
     @include md-min {
       margin-bottom: 40px;

@@ -14,7 +14,7 @@ $size: 16px;
     margin-bottom: 20px;
 
     &-image {
-      height: 100%;
+      height: auto;
     }
 
     @include md {
@@ -22,6 +22,11 @@ $size: 16px;
       padding: 20px;
     }
 
+    &-picture {
+      @include md {
+        display: none;
+      }
+    }
   }
 
   @extend %container;
@@ -32,10 +37,6 @@ $size: 16px;
     flex-direction: column;
    
     @include md-min {
-      &-name2 {
-        display: none;
-      }
-
       padding-top: 40px;
       &-imgsm {
         display: none;
@@ -45,11 +46,7 @@ $size: 16px;
     @include md {
       margin-top: 0;
     }
-    &-name {
-      @include md {
-        display: none;
-      }
-    }
+ 
 
     &-description {
       padding-bottom: 20px;

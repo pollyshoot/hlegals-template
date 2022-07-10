@@ -7,11 +7,10 @@
   &__container {
     @extend %container;
   }
+ 
 
   &__content {
     display: flex;
-    padding: 20px;
-
     padding-top: 32px;
     padding-bottom: 40px;
 

@@ -2,6 +2,7 @@
 @use "../../../mixins" as *;
 
 $size: 16px;
+
 .team {
   margin-top: 60px;
 
@@ -13,7 +14,7 @@ $size: 16px;
     margin-bottom: 20px;
 
     &-image {
-      height: auto;
+      height: 100%;
     }
 
     @include md {
@@ -21,16 +22,10 @@ $size: 16px;
       padding: 20px;
     }
 
-    &-picture {
-      @include md {
-        display: none;
-      }
-    }
   }
 
-  &__container {
-    @extend %container;
-  }
+  @extend %container;
+ 
 
   &__content {
     display: flex;
@@ -74,8 +69,7 @@ $size: 16px;
       }
     }
 
-    &-name,
-    &-name2 {
+    &-name {
       font-weight: 400;
       font-size: 18px;
       line-height: 21px;

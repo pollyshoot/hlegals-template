@@ -9,6 +9,11 @@
   padding-bottom: 40px;
   overflow: hidden;
 
+  &__container {
+    @extend %container;
+
+  }
+
   @include xs-min {
     height: 860px;
     padding-top: 40px;
@@ -34,10 +39,7 @@
     }
   }
 
-  &__container {
-    @extend %container;
-
-  }
+ 
 
   &__header {
     @include xs-min {

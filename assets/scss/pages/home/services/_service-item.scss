@@ -6,31 +6,36 @@
   gap: 10px;
   grid-template-rows: auto auto 1fr;
   align-items: center;
-
+// margin-bottom: 40px;
 
   @include md {
     grid-template-rows: auto 1fr;
-margin-top: -40px;
+    // margin-top: -40px;
     align-items: center;
   }
 
   &__icon {
   
-    
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+   
   }
   &__title {
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
     color: $color-active;
-    padding-bottom: 15px;
-    padding-top: 15px;
+    // padding-bottom: 15px;
+    // padding-top: 15px;
 
     @include sm {
       font-size: 18px;
       line-height: 21px;
       align-items: center;
-      padding-bottom: 25px;
+      // padding-bottom: 25px;
     }
   }
 
@@ -46,7 +51,7 @@ margin-top: -40px;
       font-size: 16px;
     
       font-weight: 400;
-      margin-bottom: 40px;
+    
     }
    
   }

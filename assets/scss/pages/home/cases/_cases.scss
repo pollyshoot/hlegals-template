@@ -2,78 +2,72 @@
 @use "../../../mixins" as *;
 
 .cases {
+  background-color: #ffffff;
+
   @extend %container;
-
-    background-color: #fff;
-    
-
-    @include md-min {
-      margin-top: 40px;
-    }
-
-    @include md {
-      margin-top: 30px;
-    }
-  
+  @include md-min {
+    margin-top: 40px;
+  }
+  @include md {
+    margin-top: 30px;
+  }
 
   &__content {
     display: grid;
 
-  
     border-radius: 12px;
-    gap: 2px;
 
+    gap: 2px;
     @include md-min {
+      grid-template-areas: "item1 item1 item3 item3 item4"
+      "item2 item2 item3 item3 item4"
+      "item5 item6 item6 item7 item7";
       grid-template-columns: 1.5fr 0.3fr 1.6fr 0.5fr 2fr;
       grid-template-rows: 0.3fr 1fr 1fr;
-      grid-template-areas:
-        "item1 item1 item3 item3 item4"
-        "item2 item2 item3 item3 item4"
-        "item5 item6 item6 item7 item7";
     }
-
     @include md {
+      grid-template-areas: "item1 item1"
+      "item2 item3"
+      "item4 item5"
+      "item6 item7";
       grid-template-columns: 1fr 1fr;
       grid-template-rows: 0.5fr 1fr 1fr 1fr;
-      grid-template-areas:
-        "item1 item1"
-        "item2 item3"
-        "item4 item5"
-        "item6 item7";
-     
     }
-
     @include sm {
+      grid-template-areas: "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7";
       grid-template-columns: 1fr;
       grid-template-rows: 1fr;
-      grid-template-areas:
-        "item1"
-        "item2"
-        "item3"
-        "item4"
-        "item5"
-        "item6"
-        "item7";
     }
   }
 
   &__item {
-    padding: 20px;
-    background-color: #f5f5fa;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    row-gap: 20px;
+
+    padding: 20px;
+
     cursor: pointer;
+
+    background-color: #f5f5fa;
+
+    row-gap: 20px;
   }
 
   &__item1 {
     border-radius: 12px 0 0 0;
-    grid-area: item1;
 
+    grid-area: item1;
     @include md {
-      border-radius: 12px 12px 0 0;
       justify-content: center;
+
+      border-radius: 12px 12px 0 0;
     }
   }
 
@@ -87,7 +81,6 @@
 
   &__item4 {
     grid-area: item4;
-
     @include md-min {
       border-radius: 0 12px 0 0;
     }
@@ -108,32 +101,38 @@
   }
 
   &__item7 {
-    grid-area: item7;
     border-radius: 0 0 12px 0;
 
+    grid-area: item7;
     @include sm {
       border-radius: 0 0 12px 12px;
     }
   }
   &__item-header {
-    font-size: 14px;
-    line-height: 17px;
     letter-spacing: 1px;
     text-transform: uppercase;
+
     color: #f0145a;
+
+    font-size: 14px;
+    line-height: 17px;
   }
 
   &__item-description {
-    font-size: 24px;
-    line-height: 28px;
-    font-weight: 500;
     align-items: flex-end;
-    color: $color-soft;
+
     padding-bottom: 20px;
 
+    color: $color-soft;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
     @include lg {
-      font-size: 20px;
       padding-bottom: 0;
+
+      font-size: 20px;
     }
     @include sm {
       font-size: 18px;
@@ -142,8 +141,9 @@
   }
 
   &__item-company {
+    color: $color-grey-text;
+
     font-size: 18px;
     line-height: 26px;
-    color: $color-grey-text;
   }
 }

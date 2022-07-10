@@ -3,13 +3,14 @@
 
 .service-item {
   display: grid;
-  gap: 10px;
-  grid-template-rows: auto auto 1fr;
   align-items: center;
 
+  gap: 10px;
+  grid-template-rows: auto auto 1fr;
   @include md {
-    grid-template-rows: auto 1fr;
     align-items: center;
+
+    grid-template-rows: auto 1fr;
   }
 
   &__icon {
@@ -20,27 +21,31 @@
     }
   }
   &__title {
+    color: $color-active;
+
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
-    color: $color-active;
 
     @include sm {
+      align-items: center;
+
       font-size: 18px;
       line-height: 21px;
-      align-items: center;
     }
   }
 
   &__description {
-    font-size: 18px;
-    line-height: 1.4;
     color: $color-white;
 
+    font-size: 18px;
+    line-height: 1.4;
+
     @include md {
-      grid-column: 1 / span 3;
       font-size: 16px;
       font-weight: 400;
+
+      grid-column: 1 / span 3;
     }
   }
 }

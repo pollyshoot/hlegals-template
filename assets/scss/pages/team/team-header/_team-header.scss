@@ -10,10 +10,10 @@
     top: 0;
     right: 0;
     left: 0;
+
     display: grid;
 
     @extend %container;
-
     gap: $gap;
     grid-template-columns: auto 1fr;
     @include md-min {
@@ -32,34 +32,33 @@
     display: flex;
     align-items: flex-start;
     justify-content: center;
-    grid-area: teamlogo;
 
+    grid-area: teamlogo;
     @include md {
-      height: 22px;
       align-items: flex-start;
       justify-content: center;
+
+      height: 22px;
     }
 
     &-image,
     &-slash,
     &-slashp {
-
       object-fit: contain;
     }
-   &-image {
-    @include md {
-      
-    height: 31px;
-    width: auto;
+    &-image {
+      @include md {
+        width: auto;
+        height: 31px;
+      }
     }
-   }
 
-   &-slash,
-   &-slashp {
-    @include md {
-      height: 24px;
+    &-slash,
+    &-slashp {
+      @include md {
+        height: 24px;
+      }
     }
-   }
   }
 
   &__menu {
@@ -71,11 +70,11 @@
   }
 
   &__title {
-    font-weight: 400;
-    font-size: 38px;
-    line-height: 45px;
-
     color: #323264;
+
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 45px;
 
     @include md {
       font-size: 19px;

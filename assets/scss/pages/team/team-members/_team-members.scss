@@ -3,44 +3,45 @@
 
 .members {
   padding-top: 200px;
-padding-bottom: 60px;
-  @extend %container;
+  padding-bottom: 60px;
 
+  @extend %container;
   @include xs {
     padding-top: 120px;
     padding-bottom: 40px;
   }
-  
+
   &__header {
-    font-size: 42px;
     max-width: 864px;
-    line-height: 50px;
     margin: 0 auto;
     padding-bottom: 80px;
+
     background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
+            background-clip: text;
+
+    font-size: 42px;
+    line-height: 50px;
 
     @include xs {
       padding-bottom: 20px;
+
       font-size: 32px;
       line-height: 38px;
     }
+    -webkit-text-fill-color: transparent;
+            text-fill-color: transparent;
   }
 
   &__content {
     display: flex;
-    gap: 40px;
     flex-wrap: wrap;
 
-
+    gap: 40px;
     @include lg {
       align-items: center;
       justify-content: center;
     }
-
     @include xs {
       gap: 20px;
     }
@@ -51,15 +52,18 @@ padding-bottom: 60px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+
   max-width: 413px;
 
   @include xs {
     flex-direction: row;
+
     column-gap: 20px;
   }
 
   &__photo {
     display: flex;
+
     max-width: 413px;
     height: auto;
 
@@ -70,46 +74,50 @@ padding-bottom: 60px;
 
   &__image {
     width: 100%;
+
     object-fit: contain;
   }
 
   &__description {
-    padding-top: 20px;
     display: grid;
-    grid-template-columns: auto 32px;
-    grid-template-areas:
-      "teamname teambutton"
-      "teamposition teambutton";
-
     align-items: flex-start;
 
+    padding-top: 20px;
+
+    grid-template-areas: "teamname teambutton"
+    "teamposition teambutton";
+    grid-template-columns: auto 32px;
     @include xs {
-      grid-template-areas:
-        "teamname"
-        "teamposition"
-        "teambutton";
       align-items: flex-end;
-      row-gap: 0;
+
       padding-top: 65px;
+
+      grid-template-areas: "teamname"
+      "teamposition"
+      "teambutton";
+      row-gap: 0;
     }
 
     &-name {
-      grid-area: teamname;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 21px;
       color: #323264;
 
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21px;
+
+      grid-area: teamname;
       @include xs-min {
         padding-bottom: 5px;
       }
     }
 
     &-position {
-      grid-area: teamposition;
+      color: #b3b3ba;
+
       font-size: 16px;
       line-height: 22px;
-      color: #b3b3ba;
+
+      grid-area: teamposition;
     }
 
     &-button {

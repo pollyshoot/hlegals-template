@@ -1,6 +1,5 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
-
 $size: 16px;
 
 .slider {
@@ -14,130 +13,149 @@ $size: 16px;
   }
   &__headers {
     position: relative;
-    flex-grow: 2;
-    flex-basis: 0;
+
     display: flex;
+    flex-basis: 0;
     flex-direction: column;
+    flex-grow: 2;
+
     gap: $gap;
     @include md-min {
       &::after {
-        content: "";
         position: absolute;
+        right: -42px;
+
         width: 4px;
         height: 100%;
+
+        content: "";
+
         background-color: $color-grey-separator;
-        right: -42px;
       }
     }
   }
 
   &__header {
     position: relative;
-    color: $color-grey-text;
-    font-family: "TT Norms";
 
     user-select: none;
-    @include md-min {
-      font-size: 42px;
-      text-align: right;
-    }
 
+    color: $color-grey-text;
+
+    font-family: "TT Norms";
+
+    @include md-min {
+      text-align: right;
+
+      font-size: 42px;
+    }
     @include md {
       display: none;
+
+      width: min-content;
+      margin-bottom: 10px;
+
+      white-space: nowrap;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
       font-size: 14px;
-line-height: 17px;
-letter-spacing: 1px;
-text-transform: uppercase;
-width: min-content;
-white-space: nowrap;
-margin-bottom: 10px;
+      line-height: 17px;
     }
 
     &.active {
       background-clip: text;
-      text-fill-color: transparent;
 
-     
       @include md-min {
         background: linear-gradient($bg-gradient2);
         -webkit-background-clip: text;
+
         -webkit-text-fill-color: transparent;
         &::after {
-          content: "";
           position: absolute;
           z-index: 2;
+          right: -42px;
+
           width: 4px;
           height: 100%;
+
+          content: "";
+
           background-color: $color-accent;
-          right: -42px;
         }
       }
       @include md {
         display: block;
+
         background: linear-gradient($bg-gradient3);
         -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
 
+        -webkit-text-fill-color: transparent;
       }
+      text-fill-color: transparent;
     }
   }
 
   &__notes {
-    color: $color-white;
-
-    flex-grow: 3;
-    flex-basis: 0;
     display: flex;
     align-items: center;
+    flex-basis: 0;
+    flex-grow: 3;
+
+    color: $color-white;
   }
 
   &__note {
     position: absolute;
     z-index: 9999;
+
     opacity: 0;
 
     &.active {
       position: static;
       z-index: inherit;
+
       opacity: 1;
     }
   }
 
   &__title {
-    
     margin-bottom: $gap;
 
     @include md-min {
       font-size: 32px;
     }
     @include md {
-      font-size: 22px;
       margin-bottom: 15px;
+
+      font-size: 22px;
     }
   }
 
   &__description {
-
     line-height: 1.43;
 
     @include md-min {
       font-size: 21px;
     }
     @include md {
-      font-size: 18px;
       margin-bottom: 20px;
+
+      font-size: 18px;
     }
   }
 
   &__indicators {
     display: flex;
     justify-content: center;
+
     gap: 14px;
   }
 
   &__indicator {
     width: $size;
     height: $size;
+
     opacity: 0.2;
     border-radius: $size * 0.5;
     background-color: $color-active;

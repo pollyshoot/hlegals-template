@@ -88,7 +88,9 @@ $size: 16px;
         display: block;
 
         background: linear-gradient($bg-gradient3);
-  
+        -webkit-background-clip: text;
+
+        -webkit-text-fill-color: transparent;
       }
     
     }

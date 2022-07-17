@@ -1,6 +1,7 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+
 .menu {
   align-self: center;
 
@@ -21,7 +22,7 @@
   }
 }
 
-.team-header .menu__btn-row {
+.services-header .menu__btn-row {
   position: absolute;
   left: 0;
 
@@ -35,7 +36,7 @@
 
   opacity: 1;
   border-radius: 5px;
-  background-color: #323264;
+  background-color: #fff;
 
   &:nth-of-type(1) {
     top: 0;
@@ -94,9 +95,9 @@
   }
 }
 
-.team__menu-link {
+.services__menu-link {
   display: block;
-  color: #24a3ff;
+  color: #fff;
 
   font-size: 18px;
   font-weight: 500;
@@ -107,11 +108,11 @@
   }
 }
 
-.team__menu-link-active {
+.services__menu-link-active {
   width: fit-content;
 
-  color: #f0145a;
-  border-bottom: 2px solid #f0145a;
+ 
+  border-bottom: 2px solid #fff;
 
   font-size: 18px;
   font-weight: 500;

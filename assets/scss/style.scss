@@ -4,8 +4,6 @@
 @use "presets" as *;
 
 
-
-
 @use "../scss/pages/home/header";
 
 @use "../scss/pages/home/experience";
@@ -22,3 +20,9 @@
 
 @use "../scss/pages/team/team-header";
 @use "../scss/pages/team/team-members";
+
+@use "../scss/pages/services/services-header";
+@use "../scss/pages/services/services-main";
+
+@use "../scss/pages/about/about-header";
+@use "../scss/pages/about/about-main";

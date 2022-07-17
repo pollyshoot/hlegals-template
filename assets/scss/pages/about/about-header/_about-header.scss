@@ -1,9 +1,9 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.team-header {
+.about-header {
   position: relative;
-padding-bottom: 50px;
+  padding-bottom: 50px;
   &__grid {
     position: absolute;
     z-index: 2;
@@ -82,4 +82,3 @@ padding-bottom: 50px;
     }
   }
 }
-

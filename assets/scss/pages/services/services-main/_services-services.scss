@@ -1,0 +1,162 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+.services {
+  position: relative;
+
+  padding-top: 180px;
+  padding-bottom: 80px;
+
+  border-radius: 0 0 12px 12px;
+  background: linear-gradient($bg-gradient4);
+
+  @include md {
+    padding-top: 120px;
+  }
+  @include sm {
+    padding-top: 120px;
+
+    border-radius: 0 0 12px 12px;
+    background: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+    );
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 20px;
+    left: 20px;
+
+    height: 10px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: $color-grey-text;
+  }
+
+  &::after {
+    position: absolute;
+    top: 100%;
+    right: 40px;
+    left: 40px;
+
+    height: 20px;
+
+    content: "";
+
+    border-radius: 0 0 12px 12px;
+    background-color: $color-grey-separator;
+  }
+
+  &__container {
+    @extend %container;
+  }
+
+  &__page-link {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    opacity: 0.5;
+    color: $color-white;
+
+    font-size: 14px;
+
+    &__img {
+      position: relative;
+      top: 0.9px;
+      left: 5px;
+    }
+  }
+
+  &__title {
+    background: linear-gradient(90.13deg, #f0145a 1%, #ef8080 80%);
+    -webkit-background-clip: text;
+            background-clip: text;
+
+    font-size: 42px;
+
+    @include md-min {
+      margin-bottom: 60px;
+    }
+    @include md-xs {
+      margin-bottom: 40px;
+    }
+    @include xs {
+      margin-bottom: 20px;
+    }
+    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+
+  &__grid {
+    display: grid;
+
+    gap: 40px;
+    @include md-min {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+
+.service-item {
+  display: grid;
+  align-items: center;
+
+  gap: 10px;
+  grid-template-rows: auto auto 1fr;
+  @include md {
+    align-items: center;
+
+    grid-template-rows: auto 1fr;
+  }
+
+  &__icon {
+    @include md {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__title {
+    color: $color-active;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28px;
+
+    @include sm {
+      align-items: center;
+
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+
+  &__description {
+    color: $color-white;
+
+    font-size: 18px;
+    line-height: 1.4;
+
+    @include md {
+      font-size: 16px;
+      font-weight: 400;
+
+      grid-column: 1 / span 3;
+    }
+  }
+}

@@ -1,9 +1,11 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
-.team-header {
+
+.services-header {
   position: relative;
-padding-bottom: 50px;
+
+
   &__grid {
     position: absolute;
     z-index: 2;
@@ -19,12 +21,12 @@ padding-bottom: 50px;
     @include md-min {
       padding-top: 50px;
 
-      grid-template-areas: "teamlogo teamactions" "teamlogo teammenu";
+      grid-template-areas: "servlogo servactions" "servlogo servmenu";
     }
     @include md {
       padding-top: $gap;
 
-      grid-template-areas: "teamactions teamactions" "teamlogo teammenu";
+      grid-template-areas: "servactions servactions" "servlogo servmenu";
     }
   }
 
@@ -33,7 +35,7 @@ padding-bottom: 50px;
     align-items: flex-start;
     justify-content: center;
 
-    grid-area: teamlogo;
+    grid-area: servlogo;
     @include md {
       align-items: flex-start;
       justify-content: center;
@@ -62,15 +64,15 @@ padding-bottom: 50px;
   }
 
   &__menu {
-    grid-area: teammenu;
+    grid-area: servmenu;
   }
 
   &__actions {
-    grid-area: teamactions;
+    grid-area: servactions;
   }
 
   &__title {
-    color: #323264;
+    color: #fff;
 
     font-size: 38px;
     font-weight: 400;

@@ -1,24 +1,36 @@
 @use "../../../presets" as *;
 @use "../../../mixins" as *;
 
+.team-main {
+  @include md-min {
+    padding-top: 80px;
+  }
+
+  @include md {
+    padding-top: 60px;
+  }
+
+  @include xs {
+    padding-top: 20px;
+  }
+}
 .members {
-  padding-top: 200px;
   padding-bottom: 60px;
 
   @extend %container;
+
   @include xs {
-    padding-top: 120px;
     padding-bottom: 40px;
   }
 
   &__header {
     max-width: 864px;
     margin: 0 auto;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 
     background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
     -webkit-background-clip: text;
-            background-clip: text;
+    background-clip: text;
 
     font-size: 42px;
     line-height: 50px;
@@ -38,7 +50,7 @@
     flex-wrap: wrap;
 
     gap: 40px;
-    @include lg {
+    @include ul {
       align-items: center;
       justify-content: center;
     }
@@ -84,17 +96,19 @@
 
     padding-top: 20px;
 
-    grid-template-areas: "teamname teambutton"
-    "teamposition teambutton";
+    grid-template-areas:
+      "teamname teambutton"
+      "teamposition teambutton";
     grid-template-columns: auto 32px;
     @include xs {
       align-items: flex-end;
 
       padding-top: 65px;
 
-      grid-template-areas: "teamname"
-      "teamposition"
-      "teambutton";
+      grid-template-areas:
+        "teamname"
+        "teamposition"
+        "teambutton";
       row-gap: 0;
     }
 

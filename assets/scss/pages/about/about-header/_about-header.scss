@@ -2,10 +2,11 @@
 @use "../../../mixins" as *;
 
 .about-header {
-  position: relative;
-  padding-bottom: 50px;
+ 
+  padding-bottom: 100px;
+
   &__grid {
-    position: absolute;
+    position: relative;
     z-index: 2;
     top: 0;
     right: 0;

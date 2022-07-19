@@ -3,7 +3,14 @@
 
 .about-header {
  
-  padding-bottom: 100px;
+  @include sm-min {
+    padding-bottom: 100px;
+
+  }
+
+  @include sm {
+    padding-bottom: 40px;
+  }
 
   &__grid {
     position: relative;

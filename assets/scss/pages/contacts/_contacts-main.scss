@@ -1,0 +1,122 @@
+@use "../../presets" as *;
+@use "../../mixins" as *;
+
+.contacts-main {
+  @extend %container;
+}
+
+.help {
+  margin: 0 120px;
+  display: flex;
+
+  justify-content: space-between;
+
+  &-contacts {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    flex-basis: 412px;
+
+    &__address {
+      font-size: 21px;
+      line-height: 30px;
+      color: #323264;
+      padding: 10px;
+    }
+    &__phone {
+      &-link {
+        font-size: 21px;
+        line-height: 30px;
+        color: #323264;
+        padding: 10px;
+      }
+    }
+    &__email {
+      &-link {
+        font-size: 21px;
+        line-height: 30px;
+        padding: 10px;
+        color: #24a3ff;
+      }
+    }
+
+    &__socials {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      max-width: 175px;
+      &-description {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: #24a3ff;
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: $color-grey-bg;
+  flex-basis: 530px;
+  &__title {
+    font-size: 32px;
+    line-height: 38px;
+
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    &-secondary {
+      font-size: 14px;
+      line-height: 17px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #b3b3ba;
+    }
+
+  }
+
+  &__message {
+    color: #B3B3BA;
+    &-input {
+      height: 180px;
+     display: flex;
+    justify-content: flex-start;
+    }
+   
+  }
+}
+
+input,
+textarea {
+  border-radius: 8px;
+  border: none;
+  width: 100%;
+  padding: 10px;
+
+}
+
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:   #B3B3BA;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color:    #B3B3BA;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color:    #B3B3BA;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color:    #B3B3BA;
+}

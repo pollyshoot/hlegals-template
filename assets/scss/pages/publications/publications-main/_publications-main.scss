@@ -3,17 +3,16 @@
 
 .publications-main {
   background-color: #f5f5fa;
-padding-bottom: 60px;
+  padding-bottom: 60px;
   &__container {
     @extend %container;
   }
 }
 
 .publications-content {
-
   padding-bottom: 40px;
   column-count: 3;
-  
+
   column-gap: 40px;
   padding-top: 40px;
 
@@ -24,8 +23,8 @@ padding-bottom: 60px;
 }
 
 .publication-item {
-  -webkit-column-break-inside:avoid;
-  -moz-column-break-inside:avoid;
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
 
   border-radius: 8px 8px;
 
@@ -36,37 +35,36 @@ padding-bottom: 60px;
     object-fit: cover;
   }
   &__content {
+    &-title {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-top: 20px;
 
-  
-  &-title {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
-    
-    font-size: 18px;
-    line-height: 21px;
-    color: #24a3ff;
-  }
+      font-size: 18px;
+      line-height: 21px;
+      color: #24a3ff;
+    }
 
-  &-date {
-  padding-bottom: 20px;
-  padding-top: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
-    font-size: 12px;
-    line-height: 14px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #b3b3ba;
-    border-bottom: 4px solid #e6e6f0;
-  }
+    &-date {
+      padding-bottom: 20px;
+      padding-top: 10px;
+      margin-left: 20px;
+      margin-right: 20px;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #b3b3ba;
+      border-bottom: 4px solid #e6e6f0;
+    }
 
-  &-description {
-    padding: 20px;
-    font-size: 16px;
-    line-height: 22px;
+    &-description {
+      padding: 20px;
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
-}}
+}
 
 .switcher {
   display: flex;

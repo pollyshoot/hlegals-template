@@ -20,6 +20,14 @@
     background-color: #fff;
     margin-bottom: 40px;
   }
+
+  @include md {
+    column-count: 2;
+  }
+
+  @include xs {
+    column-count: 1;
+  }
 }
 
 .publication-item {
@@ -55,14 +63,28 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       color: #b3b3ba;
-      border-bottom: 4px solid #e6e6f0;
+
+      @include xs-min {
+        border-bottom: 4px solid #e6e6f0;
+      }
+     
     }
 
     &-description {
       padding: 20px;
       font-size: 16px;
       line-height: 22px;
+
+      @include xs {
+display: none;
+      }
     }
+  }
+}
+
+.publication-xs-hide {
+  @include xs {
+    display: none;
   }
 }
 

@@ -1,0 +1,93 @@
+@use "../../../presets" as *;
+@use "../../../mixins" as *;
+
+
+.publications-header {
+ 
+  @include sm-min {
+    padding-bottom: 60px;
+
+  }
+
+  @include sm {
+    padding-bottom: 40px;
+  }
+
+  &__grid {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    display: grid;
+
+    @extend %container;
+    gap: $gap;
+    grid-template-columns: auto 1fr;
+    @include md-min {
+      padding-top: 50px;
+
+      grid-template-areas: "publogo pubactions" "publogo pubmenu";
+    }
+    @include md {
+      padding-top: $gap;
+
+      grid-template-areas: "pubactions pubactions" "publogo pubmenu";
+    }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    grid-area: publogo;
+    @include md {
+      align-items: flex-start;
+      justify-content: center;
+
+      height: 22px;
+    }
+
+    &-image,
+    &-slash,
+    &-slashp {
+      object-fit: contain;
+    }
+    &-image {
+      @include md {
+        width: auto;
+        height: 31px;
+      }
+    }
+
+    &-slash,
+    &-slashp {
+      @include md {
+        height: 24px;
+      }
+    }
+  }
+
+  &__menu {
+    grid-area: pubmenu;
+  }
+
+  &__actions {
+    grid-area: pubactions;
+  }
+
+  &__title {
+    color: #323264;
+
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 45px;
+
+    @include md {
+      font-size: 19px;
+      line-height: 22px;
+    }
+  }
+}

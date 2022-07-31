@@ -139,7 +139,7 @@ display: none;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 12px;
-
+z-index: 1;
 }
 
 .slider-publications:before {
@@ -152,8 +152,9 @@ display: none;
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
-  opacity: 70%;
+
   border-radius: 10px;
+  z-index: -1;
 }
 
 input:checked + .slider-publications {

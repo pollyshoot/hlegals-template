@@ -21,11 +21,12 @@
     }
   }
   &__title {
-    color: $color-active;
 
+    color: $color-active;
     font-size: 24px;
     font-weight: 500;
     line-height: 28px;
+
 
     @include sm {
       align-items: center;
@@ -33,6 +34,7 @@
       font-size: 18px;
       line-height: 21px;
     }
+
   }
 
   &__description {
